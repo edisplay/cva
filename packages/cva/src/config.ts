@@ -13,19 +13,23 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-import type * as CLSX from "clsx";
 
-export type ClassPropKey = "class" | "className";
-
-export type ClassValue = CLSX.ClassValue;
-
-export type ClassProp =
-  | {
-      class: ClassValue;
-      className?: never;
-    }
-  | { class?: never; className: ClassValue }
-  | { class?: never; className?: never };
-
-export type OmitUndefined<T> = T extends undefined ? never : T;
-export type StringToBoolean<T> = T extends "true" | "false" ? boolean : T;
+export { defineConfig } from "./core.js";
+export type {
+  AnyCX,
+  ClassArray,
+  ClassDictionary,
+  ClassValue,
+  Compose,
+  CVA,
+  CVAComponent,
+  CVAComponentShape,
+  CVAVariantShape,
+  CX,
+  CXInput,
+  CXOptions,
+  CXReturn,
+  DefineConfig,
+  DefineConfigOptions,
+  VariantProps,
+} from "./core.js";
